@@ -124,15 +124,15 @@
   <%= will_paginate @schedules, :previous_label => ' &lt 前へ', :next_label => '次へ &gt', class: "pagination justify-content-center mt-6 mb-7 btn--resize", renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer %>　
   <div class="center">
     <% if params[:area].present? || params[:event_type].present? || params[:teacher].present? %>
-      <%= link_to "<　一覧へ戻る", schedules_path, class: "btn btn-outline-secondary" %>
+      <%= link_to "<　一覧へ戻る", schedules_path, class: "btn btn-secondary" %>
     <% else %>
       <!-- 「staff_toppage_routes」はstaffs_helper.rbに記載 -->
       <% if current_staff.present? %>
-        <%= link_to "<　戻る", staff_toppage_routes(current_staff), class: "btn btn-outline-secondary" %>
+        <%= link_to "<　戻る", staff_toppage_routes(current_staff), class: "btn btn-secondary" %>
       <% elsif current_student.present? %>
-        <%= link_to "<　戻る", student_toppage_routes(current_student), class: "btn btn-outline-secondary" %>
+        <%= link_to "<　戻る", student_toppage_routes(current_student), class: "btn btn-secondary" %>
       <% else %>
-        <%= link_to "<　戻る", 'https://www.eartherage.com/', class: "btn btn-outline-secondary" %>
+        <%= link_to "<　戻る", 'https://www.eartherage.com/', class: "btn btn-secondary" %>
       <% end %>
     <% end %>
   </div>

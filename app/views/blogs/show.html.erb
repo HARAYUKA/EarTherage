@@ -10,6 +10,6 @@
   <p><%== Rinku.auto_link(@blog.content, :all, 'target="_blank"').html_safe if @blog.content.present? %></p>
 
   <div>
-    <%= link_to "戻る", staff_blogs_path(@staff), class: "btn btn-outline-secondary btn-resize" %>
+    <%= link_to "戻る", staff_blogs_path, class: "btn btn-secondary btn-resize" %>
   </div>
 </div>

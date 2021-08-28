@@ -2,6 +2,9 @@
   <%= render 'layouts/flash_messages' %>
   <h1>スタッフ一覧</h1>
 </div>
+<div class="container">
+  <%= link_to "スタッフ新規登録", new_staff_registration_path, class: "btn btn-primary btn-sm" %>
+</div>  
 
 <div class="container">
   <% @staffs.each_with_index do |staff, n| %>
@@ -35,4 +38,4 @@
 </div>
 <br>
 <%= will_paginate(@pusers, :previous_label => ' &lt 前へ', :next_label => '次へ &gt', class: "pagination justify-content-center mt-6 mb-7 btn--resize", renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
-<%= link_to "戻る", admin_screen_path, class: "btn btn-outline-secondary btn-resize" %>
+<%= link_to "戻る", admin_screen_path, class: "btn btn-secondary btn-resize" %>

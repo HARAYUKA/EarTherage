@@ -46,10 +46,10 @@
     <div class="col-1">
     </div>
     <div class="col-5">
-      <%= link_to "戻る", schedules_path, class: "btn btn-outline-secondary btn-block" %>
+      <%= link_to "戻る", 'javascript:history.back()', class: "btn btn-secondary btn-block" %>
     </div>
     <div class="col-5">
-      <%= f.submit yield(:button_text), class: "btn btn-outline-primary btn-block btn-#{yield(:class_text)}" %>
+      <%= f.submit yield(:button_text), class: "btn btn-primary btn-block btn-#{yield(:class_text)}" %>
     </div>
   </div>
 <% end %>

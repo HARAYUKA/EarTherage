@@ -1,4 +1,5 @@
 <%= render 'layouts/flash_messages' %>
+
 <div class="container col-10 col-md-10 col-lg-4">
   <div class="background-new">
     <h1>背景画像一覧</h1>
@@ -12,7 +13,6 @@
 </div>
 
 <div class="bg-index container col-10 col-md-10 col-lg-10">
-  
   <% @backgrounds.each do |bg| %>
     <div class="background-index mt-3 mr-2">
       <div class="background">
@@ -30,4 +30,6 @@
       </div>
     </div>  
   <% end %>
-</div>  
+</div> 
+<%= link_to "戻る", admin_screen_path, class: "btn btn-secondary mt-3 ml-3" %>
+

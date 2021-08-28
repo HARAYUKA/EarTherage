@@ -3,13 +3,15 @@
 //  padding: 0; /* 要素の内側の余白を0に定義 */
 //}
 
-.new_blog {
-  margin-left: 105px;
-}
-
-// .pyramid_parent_1 {
-//   //border :solid;         /* 子要素を左右中央揃えにする */
+// .new_blog {
+//   margin-left: 105px;
 // }
+
+.pyramid_parent_1 {
+  background-color:  #f8f8f8;    /* 背景色指定 */
+  width: 100%;
+  height: auto;
+}
 
 .pyramid_box_1 {
     //border: solid;
@@ -19,8 +21,8 @@
     display:  inline-block;     /* インラインブロック要素にする */
     // background-color:  #fff;    /* 背景色指定 */
     //padding-top: 50px;
-    margin-left: 100px;
-    margin-bottom: 5px;         /* 要素同士の隙間調整 */
+    // margin-left: 100px;
+    // margin-bottom: 5px;         /* 要素同士の隙間調整 */
     padding: 5px 5px 5px 5px;              /* 余白指定 */
     box-sizing: border-box;     /* 崩れ防止 */
     vertical-align: top;
@@ -34,10 +36,10 @@
 .pyramid_box_2 {
     //border: solid;
     //border-color: blue;
-    height: 190px;
-    width: 690px;               /* 幅指定 */
+    // height: 190px;
+    // width: 690px;               /* 幅指定 */
     display:  inline-block;     /* インラインブロック要素にする */
-    background-color:  #f8f8f8;    /* 背景色指定 */
+    // background-color:  #f8f8f8;    /* 背景色指定 */
     margin-top: 5px;
     margin-bottom: 5px;         /* 要素同士の隙間調整 */
     padding: 30px;    /* 余白指定 */
@@ -65,7 +67,7 @@
   height: 80px;
   //border: solid;
   //border-color: red;
-  margin-left: 10px;
+  margin-left: 20px;
   }
 
 
@@ -129,9 +131,9 @@
   margin-top: 10px;
 }
 
-.blog-index-return {
-  margin-left: 105px;
-}
+// .blog-index-return {
+//   margin-left: 105px;
+// }
 
 //スマホ用
 @media screen and (max-width:480px) {
@@ -169,39 +171,45 @@
     font-size: 13px;
   }
 
-  .pyramid_parent_1 {
-    width: 350px;
-  }
-
-
 
   .blog-title h1 {
     font-size : 20px;
   }
 
+  .pyramid_box_1 img{
+    width :80%;
+  }
+  
+
   .pyramid_box_1 {
-    display: block;
-    //border: solid;
-    //border-color: red;
-    height: 100px;
-    width: 100px;               /* 幅指定 */
-    padding-top: 50px;
-    margin-top: 10px;          /* 要素同士の隙間調整 */
-    margin-left: -12px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    padding: 0px 0px 0px 0px;              /* 余白指定 */
+    height: auto;
+    margin-left: 30px;
+    margin-top: 5px;
+    // display: block;
+    // //border: solid;
+    // //border-color: red;
+    // height: 100px;
+    // width: 100px;               /* 幅指定 */
+    // padding-top: 50px;
+    // margin-top: 10px;          /* 要素同士の隙間調整 */
+    // margin-left: -12px;
+    // margin-bottom: 0px;
+    // margin-right: 0px;
+    // padding: 0px 0px 0px 0px;              /* 余白指定 */
   }
 
   .pyramid_box_2 {
-    display: block;
-    height: 180px;
-    width: 300px;    /* 幅指定 */
-    margin-top: 0px;
-    margin-left: -12px;         /* 要素同士の隙間調整 */
-    margin-bottom: 0px;
-    margin-right: 0px;
-    padding: 0px 0px 0px 0px;              /* 余白指定 */
+    width: 100%;
+    margin-top: -20px;
+    padding-top: 5px;
+    // display: block;
+    // height: 180px;
+    // width: 300px;    /* 幅指定 */
+    // margin-top: 0px;
+    // margin-left: -12px;         /* 要素同士の隙間調整 */
+    // margin-bottom: 0px;
+    // margin-right: 0px;
+    // padding: 0px 0px 0px 0px;              /* 余白指定 */
   }
 
   .blog_title {
@@ -209,9 +217,9 @@
     //border-color: red;
     display: block;
     height: 40%;
-    width: 280px;
+    width: 90%;
     margin-top: 0px;
-    margin-left: 10px;
+    // margin-left: 10px;
     font-size: 15px;
   }
 
@@ -223,10 +231,12 @@
     width: 90px;
     height: 10px;
     font-size: 10px;
+    margin-left: 0px;
   }
 
   .pyramid_parent_2 {
-    margin-left: 10px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
 
@@ -246,7 +256,7 @@
     //margin-left: 100px;
     //margin-bottom: 5px;         /* 要素同士の隙間調整 */
     //padding: 30px;              /* 余白指定 * /
-    vertical-align:  top;
+    // vertical-align:  top;
   }
   .pyramid_box_4 {
     //border: solid;
@@ -258,38 +268,43 @@
     font-size: 11px;
     //margin-bottom: 5px;         /* 要素同士の隙間調整 */
     //padding: 30px;              /* 余白指定 */
-    vertical-align:  top;
+    // vertical-align:  top;
   }
 
   .pyramid_parent_3 {
+    display: flex;
     //border: solid;
     //border-color: green;
-    height: 28px;
+    // height: 28px;
+    margin-top: -30px;
+    margin-left: 120px;
+    // margin-bottom: -15px;
   }
 
   .pyramid_box_5 {
-    //border: solid;
-    //border-color: red;
-    display: inline-block;
-    height: 10px;
-    width: 40px;
-    margin-top: 10px;
-    margin-left: 200px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    //font-size: 10px;
-    //background-color: yellow;
+    // //border: solid;
+    // //border-color: red;
+    // display: inline-block;
+    // height: 10px;
+    // width: 40px;
+    // margin-top: 10px;
+    margin-left: 0px;
+    // margin-bottom: 0px;
+    // margin-right: 0px;
+    // //font-size: 10px;
+    // //background-color: yellow;
   }
 
   .pyramid_box_6 {
-    //border: solid;
-    //border-color: blue;
-    display: inline-block;
-    height: 10px;
-    width: 40px;
-    margin: 0px 0px 0px 0px;
-    //font-size: 5px;
-    //background-color: yellow;
+    margin-top: 13px;
+    // //border: solid;
+    // //border-color: blue;
+    // // display: inline-block;
+    // height: 10px;
+    // width: 40px;
+    // margin: 0px 0px 0px 0px;
+    // //font-size: 5px;
+    // //background-color: yellow;
   }
 
   .pyramid_parent_3 .a {

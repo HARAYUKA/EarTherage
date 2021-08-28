@@ -38,9 +38,13 @@
   <% end %>
   <br>
   <br>
-  <% if resource_name == :staff %>
+  <%
+=begin%>
+ <% if resource_name == :staff %>
     <%= link_to "スタッフ新規登録", new_staff_registration_path, class: "btn-resize" %>
-  <% end %>
+  <% end %> 
+<%
+=end%>
   <!--<%= link_to 'スタッフブログはこちら（一般向け）,（仮）', staff_blogs_path(1), class: "btn-resize" %>
   <br>
   <br>-->

@@ -16,7 +16,7 @@ class StaffsController < ApplicationController
 
   def update
     if @staff.update_attributes(staff_params)
-      flash[:success] = "受講生情報を更新しました。"
+      flash[:success] = "スタッフ情報を更新しました。"
       redirect_to @staff
     else
       render :template=> "staffs/edit", :locals=> { :@staff=> @staff }
