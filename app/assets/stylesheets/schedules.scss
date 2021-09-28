@@ -121,6 +121,14 @@ h1 {
   margin-bottom: 5px;
 }
 
+.event-date {
+  font-size: 22px;
+}
+
+.mark-title {
+  display: inline-flex;
+}
+
 @media screen and (max-width: 768px){
 	.contents-wrap {
 		flex-direction: column;

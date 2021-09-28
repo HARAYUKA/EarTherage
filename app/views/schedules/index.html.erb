@@ -62,25 +62,39 @@
       <div class="contents-box member-<%= s.judgement_of_members %>">
     <% end %>
         <div class="contents">
-          <div>
-            <%= l(s.created_at, format: :long) %>
-            <% if s.event_type == "イベント" %>
-              <button type="button" class="btn btn-outline-success w-60 p-0">イベント</button>
-            <% elsif s.event_type == "講座" %>
-              <button type="button" class="btn btn-outline-primary w-60 p-0">講座</button>
-            <% elsif s.event_type == "セミナー" %>
-              <button type="button" class="btn btn-outline-warning w-40 p-0">セミナー</button>
-            <% elsif s.event_type == "その他" %>
-              <button type="button" class="btn btn-outline-secondary w-60 p-0">その他</button>
-            <% end %>
-          </div>
-          <div class="only-members">
-            <% if s.judgement_of_members == true %>
-              <button type="button" class="btn btn-outline-danger p-0">会員限定</button>
+            <%
+=begin%>
+ <%= l(s.created_at, format: :long) %> 
+<%
+=end%>
+          <div class="mark-title">
+            <div class="ml-4">
+              <% if s.event_type == "イベント" %>
+                <button type="button" class="btn btn-outline-success w-60 p-0">イベント</button>
+              <% elsif s.event_type == "講座" %>
+                <button type="button" class="btn btn-outline-primary w-60 p-0">講座</button>
+              <% elsif s.event_type == "セミナー" %>
+                <button type="button" class="btn btn-outline-warning w-40 p-0">セミナー</button>
+              <% elsif s.event_type == "その他" %>
+                <button type="button" class="btn btn-outline-secondary w-60 p-0">その他</button>
+              <% end %>
+            </div>
+            <div class="only-members ml-1">
+              <% if s.judgement_of_members == true %>
+                <button type="button" class="btn btn-outline-danger p-0">会員限定</button>
+              <% else %>
+                <button type="button" class="btn btn-outline btn-sm" disabled>　</button>
+              <% end %>
+            </div>
+          </div>  
+          <div class="event-date">
+            <% if s.date != nil %>
+              <label>開催日：<%= l(s.date, format: :default) %></label><br>
             <% else %>
-              <button type="button" class="btn btn-outline btn-sm" disabled>　</button>
+              <p></p>
             <% end %>
-          </div>
+          </div>  
+          <label><%= link_to (s.title), s %></label><br>
           <div class="thumbnail">
             <% if s.image? %>
               <% if s.public_status == '中止' %>
@@ -102,15 +116,8 @@
               <image src="/assets/default.jpg" width="200" height="200">
             <% end %>
           </div>
-          <label><%= link_to (s.title), s %></label><br>
+          <label class="mt-2">セラピスト名：<%= s.teacher %></label><br>
           <label>開催エリア：<%= s.area %></label><br>
-          <% if s.date != nil %>
-            <label>開催日：<%= l(s.date, format: :default) %></label><br>
-          <% else %>
-            <p></p>
-          <% end %>
-          <label>セラピスト名：<%= s.teacher %></label><br>
-
           <% if current_staff.present? %>
             <%= link_to "編集", edit_schedule_path(s), class: "btn btn-primary" %>
             <%= link_to "削除", schedule_path(s), method: :delete,

@@ -6,9 +6,9 @@ class SchedulesController < ApplicationController
   # スケジュール一覧
   def index
     if current_staff.present?
-      @schedules = Schedule.paginate(page: params[:page], per_page: 9).order(created_at: "DESC")
+      @schedules = Schedule.paginate(page: params[:page], per_page: 9).order(date: "DESC")
     else
-      @schedules = Schedule.paginate(page: params[:page], per_page: 9).where.not(public_status: "非公開").order(created_at: "DESC")
+      @schedules = Schedule.paginate(page: params[:page], per_page: 9).where.not(public_status: "非公開").order(date: "DESC")
     end
     # if params[:search].present?
     #   @schedules = Schedule.paginate(page: params[:page]).search(params[:search]) 
